@@ -1,0 +1,21 @@
+﻿body {
+
+}
+
+.headerStyle {
+    background-color: rgb(168,200,232);
+    border: black solid 1px;
+    text-align:center;
+}
+
+table.table-bordered > thead > tr > th {
+    border: 1px solid black;
+}
+
+table.table-bordered > tbody > tr > td {
+    border: 1px solid black;
+}
+
+.w100p {
+    width:100%;
+}

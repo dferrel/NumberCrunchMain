@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Number Crunch";
+}
+@section Scripts
+{
+    <script src="@Url.Content("~/js/Index.js")"></script>
+   
+}
+
+<div class="text-center">
+    <div class="form-group">
+        <label for="txtMaxSample">Sample Max Count</label>
+        <input type="number" placeholder="Enter Maximum Sample Count" class="form-control" id="txtMaxSample" />
+    </div>
+    <div class="form-group">
+        <label for="txtPatientScore">Patient Score</label>
+        <input type="number" placeholder="Enter Patient Score" class="form-control" id="txtPatientScore" />
+    </div>
+    <div class="form-group">
+        <label for="txtDoctorScore">Doctor Score</label>
+        <input type="number" placeholder="Enter Doctor Score" class="form-control" id="txtDoctorScore" />
+    </div>
+    <div class="form-group">
+        <label for="fileUpload">Upload Message from text file</label>
+        <input class="form-control" id="fileUpload" type='file' accept='text/plain' onchange='openFile(event)'><br>
+    </div>
+
+
+    <span class="btn btn-primary btn-block" onclick="moveToResults();">
+        Submit<input type="button" style="display:none" />
+    </span>
+</div>

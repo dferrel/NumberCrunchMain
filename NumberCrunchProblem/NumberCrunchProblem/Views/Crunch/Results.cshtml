@@ -1,0 +1,57 @@
+﻿@model NumberCrunchProblem.Models.ResultsModel
+
+@{
+    ViewData["Title"] = "Results";
+}
+
+@section Scripts
+{
+    <script src="@Url.Content("~/js/Result.js")"></script>
+    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+}
+<link href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="~/css/App.css" rel="stylesheet" />
+
+<input type="hidden" id="doctorScore" value="@Model.DoctorScore" />
+<input type="hidden" id="maxResults" value="@Model.MaxResults" />
+<input type="hidden" id="patientScore" value="@Model.PatientScore" />
+
+<div>
+    <label>View</label>
+    <select id="selectedView" onchange="updateTableClass()">
+        <option value="1" selected="selected">Default</option>
+        <option value="2">Bordered</option>
+        <option value="3">Simple</option>
+    </select>
+</div>
+<br />
+
+<div id="messageData">
+    <h3 class="headerStyle">My Message</h3>
+    <textarea id="messageArea" style="width:100%;min-height:150px;" class="w100p"></textarea>
+</div>
+
+<div id="divData">
+    @*table classes
+        //default - table-striped
+        //bordered - table-bordered and table-striped
+        //simple - table-bordered
+    *@
+    <table class="table-striped darkBorder" id="resultTable">
+        <thead>
+            <tr>
+                <th>Sample #</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody">
+            
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
